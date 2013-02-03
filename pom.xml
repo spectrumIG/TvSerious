@@ -6,10 +6,10 @@
 	<version>0.1</version>
 	<name>TvSerious</name>
 	<repositories>
-	    <repository>
-           <id>ttorrent</id>
-           <url>http://repository-aidamina.forge.cloudbees.com/snapshot</url>
-       </repository>
+		<repository>
+			<id>ttorrent</id>
+			<url>http://repository-aidamina.forge.cloudbees.com/snapshot</url>
+		</repository>
 	</repositories>
 	<description>TvSerious Java Porting</description>
 	<dependencies>
@@ -24,9 +24,14 @@
 			<version>3.7.2</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.turn.ttorrent</groupId>
-		    <artifactId>ttorrent</artifactId>
-		    <version>1.2</version>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.turn.ttorrent</groupId>
+			<artifactId>ttorrent</artifactId>
+			<version>1.2</version>
 		</dependency>
 	</dependencies>
 </project>
