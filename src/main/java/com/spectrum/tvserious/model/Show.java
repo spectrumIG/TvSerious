@@ -62,13 +62,6 @@ public class Show {
 
 	}
 	
-	public void insertInDb() throws ClassNotFoundException, SQLException{
-		Class.forName("org.sqlite.JDBC");
-		
-		Connection connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
-		Statement statement = connection.createStatement();
-	}
-
 	public String getAirDay() {
 		return airDay;
 	}
