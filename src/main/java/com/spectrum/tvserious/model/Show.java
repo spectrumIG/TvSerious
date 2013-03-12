@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.moviejukebox.tvrage.model.CountryDetail;
 import com.moviejukebox.tvrage.model.ShowInfo;
-import com.spectrum.tvserious.core.error.SeriousErrorHandler;
 
 public class Show {
 	private int showID;
@@ -22,8 +21,7 @@ public class Show {
 	private String status;
 	private String summary;
 	private int totalSeason;
-	
-	
+
 	private Show(ShowInfo showInfo) {
 		this.showID = showInfo.getShowID();
 		this.showName = showInfo.getShowName();
@@ -37,7 +35,7 @@ public class Show {
 		this.startDate = showInfo.getStartDate();
 		this.started = showInfo.getStarted();
 		this.status = showInfo.getStatus();
-		this.summary  = showInfo.getSummary();
+		this.summary = showInfo.getSummary();
 		this.totalSeason = showInfo.getTotalSeasons();
 	}
 
@@ -49,15 +47,6 @@ public class Show {
 		return this.showName;
 	}
 
-	public String getMinimalShowInfo(ShowInfo showInfo) {
-		if (this.showID != 0) {
-			return this.toString();
-		} else {
-			return SeriousErrorHandler.generateTvSeriousCliError("IncorrectID");
-		}
-
-	}
-	
 	public String getAirDay() {
 		return this.airDay;
 	}
@@ -107,11 +96,11 @@ public class Show {
 	}
 
 	public Show fromShowInfoObject(ShowInfo showInfo) {
-		return new Show(showInfo);	
+		return new Show(showInfo);
 	}
 
 	@Override
 	public String toString() {
-		return "Show : " + getShowID()+ " -" + getShowName() + ".";
+		return "Show : " + getShowID() + " -" + getShowName() + ".";
 	}
 }
