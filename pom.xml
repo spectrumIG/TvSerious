@@ -11,9 +11,9 @@
 			<url>http://repository-aidamina.forge.cloudbees.com/snapshot</url>
 		</repository>
 		<repository>
-        <id>swt repo</id>
-        <url>http://swt-maven.googlecode.com/git-history/master/</url>
-    </repository>		
+			<id>swt repo</id>
+			<url>http://swt-maven.googlecode.com/git-history/master/</url>
+		</repository>
 	</repositories>
 	<description>TvSerious Java Porting</description>
 	<dependencies>
@@ -43,14 +43,14 @@
 			<version>13.0.1</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.eclipse.swt</groupId>
-        <artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
-        <version>4.2.1</version>		    
+			<groupId>org.eclipse.swt</groupId>
+			<artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId>
+			<version>4.2.1</version>
 		</dependency>
 		<dependency>
-		       <groupId>org.eclipse.ui</groupId>
-	      <artifactId>org.eclipse.ui.workbench</artifactId>
-	      <version>3.7.1.v20120104-1859</version>
+			<groupId>org.eclipse.ui</groupId>
+			<artifactId>org.eclipse.ui.workbench</artifactId>
+			<version>3.7.1.v20120104-1859</version>
 		</dependency>
 	</dependencies>
 </project>
