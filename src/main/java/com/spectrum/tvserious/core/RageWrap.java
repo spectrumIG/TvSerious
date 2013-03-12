@@ -3,8 +3,9 @@ package com.spectrum.tvserious.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.common.collect.ImmutableList;
 import com.moviejukebox.tvrage.TVRage;
+import com.moviejukebox.tvrage.model.Episode;
+import com.moviejukebox.tvrage.model.EpisodeList;
 import com.moviejukebox.tvrage.model.ShowInfo;
 
 public class RageWrap {
@@ -18,7 +19,7 @@ public class RageWrap {
 
 	public static RageWrap getInstance() {
 		return INSTANCE;
-		
+
 	}
 
 	private List<ShowInfo> getShowInfosFromString(String search) {
@@ -37,4 +38,21 @@ public class RageWrap {
 		return possibleShow;
 	}
 
+	public ShowInfo getShow(int showId) {
+		return this.tvRage.getShowInfo(showId);
+
+	}
+
+	@Deprecated
+	public ShowInfo getShow(String showIdString) {
+		return this.tvRage.getShowInfo(showIdString);
+	}
+	
+	public Episode getEpisode(String showId, String seasonId, String episodeId){
+		return this.tvRage.getEpisodeInfo(showId, seasonId, episodeId);
+	}
+	
+	public EpisodeList getEpisodeList(String showId) {
+		return this.tvRage.getEpisodeList(showId);
+	}
 }
