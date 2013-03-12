@@ -10,24 +10,17 @@ import com.moviejukebox.tvrage.model.ShowInfo;
 public class RageWrap {
 	private final TVRage tvRage;
 	private final String KEY = Values.API_KEY;
-	private String searcheableValue;
+	private static RageWrap INSTANCE = new RageWrap();
 
-	public RageWrap() {
+	private RageWrap() {
 		this.tvRage = new TVRage(KEY);
 	}
 
-	public TVRage getTvRage() {
-		return this.tvRage;
+	public static RageWrap getInstance() {
+		return INSTANCE;
+		
 	}
 
-	public String getSearcheableValue() {
-		return this.searcheableValue;
-	}
-
-	public void setSearcheableValue(String searcheableValue) {
-		this.searcheableValue = searcheableValue;
-	}
-	
 	private List<ShowInfo> getShowInfosFromString(String search) {
 		return (List<ShowInfo>) this.tvRage.searchShow(search);
 	}
@@ -38,7 +31,7 @@ public class RageWrap {
 		List<String> possibleShow = new ArrayList<String>();
 
 		for (ShowInfo show : listOfPossibleShows) {
-			String showFinal = show.getShowID() +" " +show.getShowName();
+			String showFinal = show.getShowID() + " " + show.getShowName();
 			possibleShow.add(showFinal);
 		}
 		return possibleShow;
