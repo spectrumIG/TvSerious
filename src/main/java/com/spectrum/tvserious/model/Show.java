@@ -1,9 +1,5 @@
 package com.spectrum.tvserious.model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Date;
 import java.util.List;
 
@@ -63,51 +59,51 @@ public class Show {
 	}
 	
 	public String getAirDay() {
-		return airDay;
+		return this.airDay;
 	}
 
 	public String getAirTime() {
-		return airTime;
+		return this.airTime;
 	}
 
 	public String getEnded() {
-		return ended;
+		return this.ended;
 	}
 
 	public List<String> getGenres() {
-		return genres;
+		return this.genres;
 	}
 
 	public List<CountryDetail> getNetwork() {
-		return network;
+		return this.network;
 	}
 
 	public int getRuntime() {
-		return runtime;
+		return this.runtime;
 	}
 
 	public String getShowLink() {
-		return showLink;
+		return this.showLink;
 	}
 
 	public Date getStartDate() {
-		return startDate;
+		return this.startDate;
 	}
 
 	public int getStarted() {
-		return started;
+		return this.started;
 	}
 
 	public String getStatus() {
-		return status;
+		return this.status;
 	}
 
 	public String getSummary() {
-		return summary;
+		return this.summary;
 	}
 
 	public int getTotalSeason() {
-		return totalSeason;
+		return this.totalSeason;
 	}
 
 	public Show fromShowInfoObject(ShowInfo showInfo) {
